@@ -1,0 +1,28 @@
+body {
+	background: #CCC;
+}
+
+.mostly {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+.mostly-row {
+	padding: 10px;
+}
+
+.mostly-column {
+	float: left;
+	width: 46%;
+	margin: 1%;
+	padding: 1%;
+}
+
+.verde_A {
+	background: #70AA39;
+}
+.verde_B {
+	background: #97c335;
+}
+.verde_C {
+	background: #cde1a7;
+}
