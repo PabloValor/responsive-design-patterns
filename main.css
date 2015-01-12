@@ -5,6 +5,7 @@ body {
 .mostly {
 	max-width: 1024px;
 	margin: 0 auto;
+	padding: 10px;
 }
 .mostly-row {
 	padding: 10px;
