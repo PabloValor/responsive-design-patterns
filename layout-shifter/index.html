@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Layout shifter</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="http://necolas.github.io/normalize.css/3.0.2/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../main.css">
+
+	<style>
+		.shifter{
+			max-width: 1024px;
+			margin: 0 auto;
+		}
+		.shifter-top {
+			margin-bottom: 20px;
+		}
+		.shifter-bottom {
+			overflow: hidden;
+			padding: 20px 0;
+		}
+		.shifter-column {
+			float: left;
+			display: inline-block;
+			width: 50%;
+		}
+		/*desktop*/
+		@media screen and (max-width: 1024px) {
+			.shifter{
+				max-width: 900px;
+			}
+		}
+		/*tablet*/
+		@media screen and (max-width: 768px) {
+			.shifter{
+				max-width: 600px;
+			}
+		}
+		/*smartphone*/
+		@media screen and (max-width: 767px) {
+			.shifter{
+				max-width: 400px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<section class="shifter">
+		<div class="shifter-top verde_A">
+			<h1>Layout shifter</h1>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, neque molestias. Laboriosam aliquam corporis, nemo optio blanditiis nihil maiores rerum ab quasi, ut possimus tempore temporibus, ex explicabo cupiditate sed?
+		</div>
+		<div class="shifter-bottom verde_B">
+			<div class="shifter-column verde_A">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi error magni exercitationem magnam molestiae aperiam inventore quaerat doloremque aliquid beatae quo, qui voluptate tenetur illo facilis asperiores! Quos, magnam, accusamus.
+			</div>
+			<div class="shifter-column verde_C">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia magnam inventore quo, voluptatibus porro impedit soluta, veniam beatae odit in quidem molestias tenetur maiores praesentium iure, vero eos accusamus dolorem!
+			</div>
+		</div>
+
+	</section>
+	
+</body>
+</html>
