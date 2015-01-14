@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>Response Design Patterns</title>
+	<link rel="stylesheet" type="text/css" href="http://necolas.github.io/normalize.css/3.0.2/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../main.css">
+
+	<style>
+		h1,h2 {
+			margin: 0;
+		}
+		.canvas {
+			overflow: hidden;
+			position: relative;
+
+		}
+		.canvas-menu {
+			width: 200px;
+			position: absolute;
+			left: -200px;
+			top: 0;
+			-webkit-transition: 1s;
+		}
+			.canvas-menu.is-active {
+				left: 0;
+			}
+
+		.canvas-main {
+
+		}
+		.canvas-sidebar {
+			position: absolute;
+			width: 200px;
+			right: -200px;
+			top: 0;
+			-webkit-transition: 1s;
+		}
+			.canvas-sidebar.is-active {
+				right: 0;
+			}
+	</style>
+
+</head>
+<body>
+	<section class="canvas">
+		<div class="canvas-menu verde_A">
+			<h1> Off canvas </h1>
+			<h2>menu</h2>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis illo cupiditate, nihil fugiat error iusto recusandae temporibus, ipsa nostrum eos inventore veniam eaque, adipisci laboriosam impedit neque ad. Molestiae, facilis!
+		</div>
+		<div class="canvas-main verde_B">
+			<h2>main</h2>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus harum blanditiis, velit eius iure iusto placeat! Molestiae tempore blanditiis nobis, voluptatum veritatis pariatur dolorem, sapiente sequi ipsa aperiam, enim nemo.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa iste error eveniet ea itaque, quas repellat tempora optio id animi, eius iusto ipsum sint commodi neque laudantium consequuntur nihil! Similique!
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, repellendus maxime. Nemo vel nam, dolorum esse corporis officia voluptatum quod recusandae expedita? Sequi architecto, fugiat reiciendis ducimus vitae laboriosam debitis.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit labore asperiores corporis explicabo suscipit hic eaque est commodi facere, iste beatae officia velit temporibus, fugit nulla blanditiis eligendi recusandae non!
+		</div>
+		<div class="canvas-sidebar verde_C">
+			<h2>sidebar</h2>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat labore vero, aspernatur laboriosam ratione doloribus. Incidunt veniam in voluptas architecto, facilis delectus, odit explicabo reprehenderit ab labore repudiandae eaque tempore.
+		</div>
+	</section>
+</body>
+</html>
