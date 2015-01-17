@@ -48,7 +48,7 @@
 				padding: 0;
 				position: absolute;
 				text-align: center;
-				transition: 1s;
+				transition: .2s;
 				list-style: none;
 				top: 0;
 				margin: 10px auto;
@@ -151,9 +151,19 @@
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat labore vero, aspernatur laboriosam ratione doloribus. Incidunt veniam in voluptas architecto, facilis delectus, odit explicabo reprehenderit ab labore repudiandae eaque tempore.
 		</div>
 	</section>
+	<script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
 	<script type="text/javascript">
+
 		var menu = document.getElementById('main-menu'),
-			button = document.getElementsByTagName('button')[0];
+			button = document.getElementsByTagName('button')[0],
+			body = document.getElementsByTagName('body')[0],
+			hammerBody = new Hammer(body);
+
+			hammerBody.on('panright', showMenu);
+			hammerBody.on('panleft', hideMenu);
+
+
+		/* Event Listener for button */
 
 		button.addEventListener('click', function (e) {
 			
@@ -166,6 +176,13 @@
 			}
 
 		});
+
+		function showMenu() {
+			menu.classList.add('is-active');
+		}
+		function hideMenu() {
+			menu.classList.remove('is-active');
+		}
 	</script>
 </body>
 </html>
