@@ -8,7 +8,11 @@
 	<link rel="stylesheet" type="text/css" href="../main.css">
 
 	<style>
-		h1,h2 {
+		h1{
+			display: inline-block;
+			margin: 10px 0;
+		}
+		h2 {
 			margin: 0;
 		}
 		.canvas {
@@ -16,16 +20,60 @@
 			position: relative;
 
 		}
-		.canvas-menu {
-			width: 200px;
-			position: absolute;
-			left: -200px;
-			top: 0;
-			-webkit-transition: 1s;
+
+		.canvas-header {
+			background: navy;
+			color: white;
+			height: 72px;
+			padding: 10px;
+			position: relative;
 		}
-			.canvas-menu.is-active {
-				left: 0;
+			button {
+				background: orange;
+				border: none;
+				color: white;
+				padding: 5px 8px;
+				position: absolute;
+				right: 20px;
+				top: 30px;
 			}
+
+			.canvas-header .logo {
+				text-transform: uppercase;
+				text-shadow: -1px 2px 0 orange;
+			}
+			.canvas-header .main-menu {
+				background: navy;
+				left: -200px;
+				padding: 0;
+				position: absolute;
+				text-align: center;
+				transition: 1s;
+				list-style: none;
+				top: 0;
+				margin: 10px auto;
+				width: 200px;
+			}
+				.main-menu li {
+					height: 50px;
+					line-height: 50px;
+				}
+				.main-menu a {
+					color: white;
+					display: block;
+					text-decoration: none;
+					text-transform: uppercase;
+					font-size: 14px;
+					transition: .5s;
+				}
+					.main-menu a:hover {
+						background: green;
+						color: cyan;
+					}
+				.main-menu.is-active {
+					left: 0;
+				}
+
 
 		.canvas-main {
 
@@ -40,16 +88,57 @@
 			.canvas-sidebar.is-active {
 				right: 0;
 			}
+
+		/* Tablet */
+		@media screen and (min-width: 767px){
+
+			button { 
+				display: none;
+			}
+
+			.canvas-header .main-menu {
+				left: initial;
+				right: 0;
+				width: auto;
+			}
+			.canvas-header .main-menu li {
+				display: inline-block;
+			}
+
+			.canvas-header .main-menu li a {
+				padding: 0 20px;
+			}
+		}
+		/* Mobile */
+		@media screen and (min-width: 320px) {
+			button {
+				right: 9px;
+				top: 59px;
+			}
+		}
+		@media screen and (min-width: 340px) {
+			button {
+				right: 30px;
+				top: 25px;
+			}
+		}
 	</style>
 
 </head>
 <body>
 	<section class="canvas">
-		<div class="canvas-menu verde_A">
-			<h1> Off canvas </h1>
-			<h2>menu</h2>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis illo cupiditate, nihil fugiat error iusto recusandae temporibus, ipsa nostrum eos inventore veniam eaque, adipisci laboriosam impedit neque ad. Molestiae, facilis!
-		</div>
+
+		<header class="canvas-header verde_A">
+			<h1 class="logo"> Off canvas</h1>
+			<button>Show Menu</button>
+			<ul class="main-menu" id="main-menu">
+				<li><a href="#">similique!</a></li>
+				<li><a href="#">consectetur</a></li>
+				<li><a href="#">vitae</a></li>
+				<li><a href="#">adipisicing</a></li>
+			</ul>
+		</header>
+
 		<div class="canvas-main verde_B">
 			<h2>main</h2>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus harum blanditiis, velit eius iure iusto placeat! Molestiae tempore blanditiis nobis, voluptatum veritatis pariatur dolorem, sapiente sequi ipsa aperiam, enim nemo.
@@ -62,5 +151,21 @@
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat labore vero, aspernatur laboriosam ratione doloribus. Incidunt veniam in voluptas architecto, facilis delectus, odit explicabo reprehenderit ab labore repudiandae eaque tempore.
 		</div>
 	</section>
+	<script type="text/javascript">
+		var menu = document.getElementById('main-menu'),
+			button = document.getElementsByTagName('button')[0];
+
+		button.addEventListener('click', function (e) {
+			
+			if(menu.classList.contains('is-active')) {
+				menu.classList.remove('is-active');
+				button.innerText = "Show Menu";
+			} else {
+				menu.classList.add('is-active');
+				button.innerText = "Hide Menu";
+			}
+
+		});
+	</script>
 </body>
 </html>
